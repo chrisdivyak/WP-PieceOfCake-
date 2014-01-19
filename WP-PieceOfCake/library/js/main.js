@@ -8,5 +8,8 @@ $(window).ready(function () {
 	});
 
     $('nav.applePie').easyPie();
+    
+    //Remove default wrapping div from menu
+    $('nav ul').unwrap();
 
 });
