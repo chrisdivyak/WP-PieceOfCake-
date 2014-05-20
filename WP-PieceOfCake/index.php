@@ -1,9 +1,18 @@
 <?php get_header(); ?>
 
 <!-- CONTENT STARTS HERE -->
+<!-- CONTENT STARTS HERE -->
 <section role="main" id="main" class="clearfix">
 <article role="article">
-	<div class="two-thirds box clearfix">
+		<img src="<?php echo get_template_directory_uri(); ?>/library/images/slide1.jpg" alt="Slider 1"/>
+		
+		<div class="half align-right">
+			<h2>...For You, </h2>
+			<h3>Your Team, Your Organization</h3>
+			<a class="greenbtn">Start Your Journey Today</a>
+		</div>
+</article>
+</section>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -43,9 +52,7 @@
 			<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 			<?php endif; ?>
 	</div>
-	</div>
 
-	<?php get_sidebar(); ?>
 
 </article>
 </section>

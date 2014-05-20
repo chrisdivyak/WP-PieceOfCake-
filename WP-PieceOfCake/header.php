@@ -67,9 +67,24 @@
 <!-- MAIN FLEX NAV -->
 <nav class="applePie" role="navigation" aria-labelledby="nav">
 <div class="menubtn">Menu Button</div>
-<ul id="nav">
-	<li><?php bones_main_nav(); ?></li>
-</ul>
+<nav class="applePie" role="navigation" aria-labelledby="nav">
+<div class="menubtn">Menu Button</div>
+
+<?php if ( has_nav_menu( 'primary-menu', 'mytheme' ) ) { ?>
+	<?php wp_nav_menu( array( 'container' => false, 'menu_class' => 'menu', 'theme_location' => 'primary-menu', 'fallback_cb' => 'display_home' ) ); ?>
+
+	<?php } else { ?>
+
+    <ul id="nav">
+
+	<li><a href="<?php echo home_url(); ?>/">Home</a></li>
+	<?php wp_list_pages('title_li=' ); ?>
+
+    </ul><!-- end .menu -->
+
+	<?php	} ?>
+</nav>
+
 </nav>
 
 
